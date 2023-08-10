@@ -18,8 +18,6 @@ return new class extends Migration
             $table->integer('bedrooms');
             $table->integer('bathrooms');
             $table->integer('beds');
-            $table->json('amenities');
-            $table->json('facilities');
             $table->decimal('price', 10, 2);
             $table->integer('max_guests');
             $table->string('address');
@@ -29,11 +27,14 @@ return new class extends Migration
             $table->integer('min_stay_nights');
             $table->time('check_in_time');
             $table->time('check_out_time');
-            $table->decimal('latitude', 10, 8);
-            $table->decimal('longitude', 11, 8);
+            $table->integer('latitude');
+            $table->integer('longitude');
             $table->boolean('is_featured')->default(false);
-            $table->string('contact_email');
             $table->string('slug')->unique();
+            $table->string('seo_title')->nullable();
+            $table->text('seo_description')->nullable();
+            $table->string('seo_keywords')->nullable();
+
             $table->timestamps();
 
             $table->foreign('city_id')->references('id')->on('cities');
