@@ -5,7 +5,7 @@
 @section('content')
     <div class="relative isolate">
         <div class="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
-            <div class="relative px-6 pb-20 pt-24 sm:pt-32 lg:static lg:px-8 lg:py-48 border-r border-yellow-400">
+            <div class="relative px-6 pb-20 pt-16 sm:pt-32 lg:static lg:px-8 lg:py-24 lg:border-r lg:border-yellow-400 sm:border-r-0">
                 <div class="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
 
                     <h2 class="text-3xl font-bold tracking-tight text-white">Get in touch</h2>
@@ -50,7 +50,7 @@
                             @foreach ($settings->social_media_links as $link)
                                 <dt class="flex-none">
                                     <a href="{{ $link['url'] }}" target="_blank" rel="noopener noreferrer">
-                                        <x-icon name="{{ $link['icon'] }}" width="20" style="color: #FACC15"/>
+                                        <x-icon name="{{ $link['icon'] }}" width="20" style="color: #FFF"/>
                                     </a>
 
                                 </dt>
@@ -59,7 +59,7 @@
                     </dl>
                 </div>
             </div>
-            <form action="{{ route('contact.create') }}" method="POST" class="px-6 pb-24 pt-20 sm:pb-32 lg:px-8 lg:py-48">
+            <form action="{{ route('contact.create') }}" method="POST" class="px-6 sm:pb-32 lg:px-8 lg:py-24">
                 
                 @csrf
                 <div class="mx-auto max-w-xl lg:mr-0 lg:max-w-lg">

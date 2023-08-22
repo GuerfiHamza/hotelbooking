@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\View;
 use App\Models\Villa;
 use App\Models\SeoSetting;
 use App\Models\Websitesetting;
+use App\Models\ContactSetting;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -28,7 +29,8 @@ class AppServiceProvider extends ServiceProvider
             $villaSlug = Villa::first()->slug;
             $seoSettings = SeoSetting::first();
             $websiteSettings = Websitesetting::first();
-            $view->with(compact('villaName', 'villaSlug', 'seoSettings', 'websiteSettings'));
+            $contactSettings = ContactSetting::first();
+            $view->with(compact('villaName', 'villaSlug', 'seoSettings', 'websiteSettings', 'contactSettings'));
         });
     }
 }

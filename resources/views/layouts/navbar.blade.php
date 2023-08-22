@@ -19,7 +19,6 @@
           <a href="{{ route('villas.show', ['slug' => $villaSlug]) }}" class="text-sm font-semibold leading-6 text-white rounded-lg px-3 py-2 hover:bg-black transition-colors">{{ $villaName }}</a>
           <a href="{{ route('contact') }}" class="text-sm font-semibold leading-6 text-white rounded-lg px-3 py-2 hover:bg-black transition-colors">Contact</a>
           
-          <a href="#" class="rounded-md bg-yellow-300 px-3 py-2 text-sm font-semibold shadow-sm hover:bg-yellow-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-600">Book Now</a>
         </div>
       </nav>
       <div class="lg:hidden" x-ref="dialog" x-show="open" aria-modal="true">
@@ -45,9 +44,7 @@
                 <a href="{{ route('contact')}}" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-900">Contact</a>
                 
               </div>
-              <div class="py-6">
-                <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:bg-gray-900">Book Now</a>
-              </div>
+              
             </div>
           </div>
         </div>
