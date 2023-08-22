@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\VillaController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\BookingController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,7 +22,9 @@ Route::get('/', function () {
 })->name('home');
 
 Route::get('/villas/{slug}', [VillaController::class, 'show'])->name('villas.show');
-
+Route::get('/contact', [ContactController::class, 'index'])->name('contact');
+Route::post('/contact', [ContactController::class, 'createContact'])->name('contact.create');
+Route::post('/booking', [BookingController::class, 'createBooking'])->name('booking.create');
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

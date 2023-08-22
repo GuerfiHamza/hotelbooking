@@ -27,8 +27,9 @@ return new class extends Migration
             $table->integer('min_stay_nights');
             $table->time('check_in_time');
             $table->time('check_out_time');
-            $table->integer('latitude');
-            $table->integer('longitude');
+            $table->decimal('latitude', 10, 15);
+            $table->decimal('longitude', 10, 15);
+
             $table->boolean('is_featured')->default(false);
             $table->string('slug')->unique();
             $table->string('seo_title')->nullable();

@@ -12,6 +12,7 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Guava\FilamentIconPicker\Forms\IconPicker;
 
 class AmenityResource extends Resource
 {
@@ -26,9 +27,7 @@ class AmenityResource extends Resource
                 Forms\Components\TextInput::make('name')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\TextInput::make('icon')
-                    ->required()
-                    ->maxLength(255),
+                    IconPicker::make('icon')->required(),
             ]);
     }
 

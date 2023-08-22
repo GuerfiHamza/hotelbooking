@@ -22,6 +22,7 @@ use Filament\Forms\Components\Wizard;
 use Filament\Forms\Components\Wizard\Step;
 use Illuminate\Support\HtmlString;
 use Illuminate\Support\Facades\Blade;
+use Guava\FilamentIconPicker\Forms\IconPicker;
 
 class VillaResource extends Resource
 {
@@ -56,12 +57,12 @@ class VillaResource extends Resource
                         Forms\Components\Select::make('facilities')
                             ->multiple()
                             ->preload()
-                            ->createOptionForm([Forms\Components\TextInput::make('name')->required(), Forms\Components\TextInput::make('icon')->required()])
+                            ->createOptionForm([Forms\Components\TextInput::make('name')->required(), IconPicker::make('icon')->required()->cacheable(false)])
                             ->relationship(name: 'facilities', titleAttribute: 'name'),
                         Forms\Components\Select::make('amenities')
                             ->multiple()
                             ->preload()
-                            ->createOptionForm([Forms\Components\TextInput::make('name')->required(), Forms\Components\TextInput::make('icon')->required()])
+                            ->createOptionForm([Forms\Components\TextInput::make('name')->required(), IconPicker::make('icon')->required()->cacheable(false)])
                             ->relationship(name: 'amenities', titleAttribute: 'name'),
                     ]),
                 Step::make('Location Information')
