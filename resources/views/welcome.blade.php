@@ -26,7 +26,7 @@
                                 our exclusive villa retreat.</p>
                             <div class="mt-10 flex items-center gap-x-6">
                                 <a href="#"
-                                    class="rounded-md px-3.5 py-2.5 text-sm font-semibold shadow-sm bg-yellow-300 text-gray-900 hover:bg-yellow-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Get
+                                    class="rounded-md px-3.5 py-2.5 text-sm font-semibold shadow-sm bg-yellow-300 text-gray-900 hover:bg-yellow-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-600">Get
                                     started</a>
                             </div>
                         </div>

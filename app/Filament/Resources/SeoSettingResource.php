@@ -55,6 +55,9 @@ class SeoSettingResource extends Resource
                     ->maxLength(255),
                 Forms\Components\FileUpload::make('favicon_url')
                     ->image(),
+                    Forms\Components\TextInput::make('contact_email')
+                    ->required()
+                    ->email(),
                     
             ]);
     }

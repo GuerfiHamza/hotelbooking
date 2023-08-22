@@ -6,6 +6,7 @@ use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\View;
 use App\Models\Villa;
 use App\Models\SeoSetting;
+use App\Models\Websitesetting;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -25,9 +26,9 @@ class AppServiceProvider extends ServiceProvider
         view()->composer('*', function ($view) {
             $villaName = Villa::first()->name;
             $villaSlug = Villa::first()->slug;
-            $seoSettings = SeoSetting::firstOrFail();
-
-            $view->with(compact('villaName', 'villaSlug', 'seoSettings'));
+            $seoSettings = SeoSetting::first();
+            $websiteSettings = Websitesetting::first();
+            $view->with(compact('villaName', 'villaSlug', 'seoSettings', 'websiteSettings'));
         });
     }
 }
